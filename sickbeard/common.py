@@ -134,7 +134,8 @@ class Quality:
 		quality = findQuality(os.path.basename(name), True)
 		if quality == Quality.UNKNOWN:
 			return findQuality(os.path.dirname(os.path.realpath(name),False))
-		else: return quality
+		else: 
+			return quality
 		
 	@staticmethod
 	def findQuality(name, baseName) #Basename true means that it is searching through the baseName of the file 
