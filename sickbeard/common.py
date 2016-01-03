@@ -131,8 +131,13 @@ class Quality:
 
     @staticmethod
     def nameQuality(name):
-        name = os.path.basename(name)
-
+		quality = findQuality(os.path.basename(name), True))
+		if quality = Quality.Unknown
+			return findQuality(os.path.dirname(os.path.realpath(name),False))
+		else: return quality
+		
+	@staticmethod
+	def findQuality(name, baseName) #Basename true means that it is searching through the baseName of the file 
         # if we have our exact text then assume we put it there
         for x in sorted(Quality.qualityStrings, reverse=True):
             if x == Quality.UNKNOWN:
