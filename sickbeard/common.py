@@ -138,7 +138,7 @@ class Quality:
 			return quality
 		
 	@staticmethod
-	def findQuality(name, baseName) #Basename true means that it is searching through the baseName of the file 
+	def findQuality(name, baseName): #Basename true means that it is searching through the baseName of the file 
         # if we have our exact text then assume we put it there
         for x in sorted(Quality.qualityStrings, reverse=True):
             if x == Quality.UNKNOWN:
