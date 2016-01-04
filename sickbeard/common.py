@@ -132,7 +132,8 @@ class Quality:
     @staticmethod
     def nameQuality(name):
         quality = Quality.findQuality(os.path.basename(name))
-        if quality == Quality.UNKNOWN:
+		logger.log(os.path.dirname(os.path.realpath(name)), logger.DEBUG)
+        if quality is Quality.UNKNOWN:
             return Quality.findQuality(os.path.dirname(os.path.realpath(name)))
         else:
             return quality
