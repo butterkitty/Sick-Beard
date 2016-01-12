@@ -255,6 +255,8 @@ def pickBestResult(results, show, quality_list=None):
                 bestResult = cur_result
             elif "hevc" in cur_result.name.lower() and "hevc" not in bestResult.name.lower():
                 bestResult = cur_result
+            elif "h265" in cur_result.name.lower() and "h265" not in bestResult.name.lower():
+                bestResult = cur_result
 
     if bestResult:
         logger.log(u"Picked " + bestResult.name + " as the best", logger.MESSAGE)
