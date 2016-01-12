@@ -131,15 +131,8 @@ class Quality:
 
     @staticmethod
     def nameQuality(name):
-        quality = Quality.findQuality(os.path.basename(name))
-		logger.log(os.path.dirname(os.path.realpath(name)), logger.DEBUG)
-        if quality is Quality.UNKNOWN:
-            return Quality.findQuality(os.path.dirname(os.path.realpath(name)))
-        else:
-            return quality
+        name = os.path.basename(name)
 
-    @staticmethod
-    def findQuality(name):
         # if we have our exact text then assume we put it there
         for x in sorted(Quality.qualityStrings, reverse=True):
             if x == Quality.UNKNOWN:
