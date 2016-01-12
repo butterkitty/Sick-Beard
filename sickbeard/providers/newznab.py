@@ -357,7 +357,7 @@ class NewznabProvider(generic.NZBProvider):
 
         self._checkAuth()
 
-        params = {"t": "search",
+        params = {"t": "tvsearch",
                   "maxage": sickbeard.USENET_RETENTION,
                   "limit": 100,
                   "cat": self.catIDs}
